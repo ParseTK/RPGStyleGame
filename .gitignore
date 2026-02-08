@@ -28,3 +28,10 @@ MemoryCaptures/
 # OS-specific
 .DS_Store
 Thumbs.db
+
+# Visual Studio / IDE
+.vs/
+*.suo
+
+.vsconfig
+

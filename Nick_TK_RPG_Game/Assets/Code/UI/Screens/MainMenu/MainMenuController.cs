@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    [Header("Scene names")]
-    [SerializeField] private string gameplayScene = "URP2DSceneTemplate";
+    [Header("Settings")]
+    [SerializeField] private MainMenuSettings settings;
 
     [Header("Panels")]
     [SerializeField] private GameObject mainPanel;
@@ -12,13 +12,13 @@ public class MainMenuController : MonoBehaviour
 
     public void Play()
     {
-        if (string.IsNullOrWhiteSpace(gameplayScene))
+        if (string.IsNullOrWhiteSpace(settings.gameplayScene))
         {
             Debug.LogError("Gameplay scene name not set on MainMenuController.");
             return;
         }
 
-        SceneManager.LoadScene(gameplayScene);
+        SceneManager.LoadScene(settings.gameplayScene);
     }
 
     public void OpenOptions()
